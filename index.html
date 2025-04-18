@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>陳錦璇的職涯網頁</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #d1f1e0, #ffe3c2, #fffef5);
+      background-size: 300% 300%;
+      animation: gradientFlow 12s ease infinite;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .jump-link {
+      transition: transform 0.15s ease-in-out;
+      display: inline-block;
+    }
+
+    .jump-link:hover {
+      transform: scale(1.8);
+    }
+  </style>
+
+  <script>
+    const images = ["picture.jpg", "picture2.jpg"];
+    let currentIndex = 0;
+    let intervalId;
+
+    function showImage(index) {
+      currentIndex = index;
+      document.getElementById("profileImage").src = images[currentIndex];
+      updateDots();
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+
+    function updateDots() {
+      images.forEach((_, idx) => {
+        const dot = document.getElementById("dot" + idx);
+        dot.classList.toggle("bg-blue-500", idx === currentIndex);
+        dot.classList.toggle("bg-gray-300", idx !== currentIndex);
+      });
+    }
+
+    window.onload = () => {
+      updateDots();
+      intervalId = setInterval(nextImage, 2000);
+    };
+  </script>
+</head>
+
+<body class="text-gray-800">
+
+  <header class="p-6 text-center">
+    <h1 class="text-3xl font-bold text-blue-900 drop-shadow-lg">陳錦璇的個人職涯網頁</h1>
+  </header>
+
+  <nav class="bg-white bg-opacity-20 backdrop-blur-md text-blue-500 font-semibold shadow-md rounded-full w-max mx-auto px-6 py-2 my-4">
+    <ul class="flex justify-center space-x-6">
+      <li><a href="index.html" class="jump-link">關於我</a></li>
+      <li><a href="job.html" class="jump-link">職涯測驗結果</a></li>
+      <li><a href="resume.html" class="jump-link">未來規劃</a></li>
+      <li><a href="career.html" class="jump-link">職涯目標</a></li>
+    </ul>
+  </nav>
+
+  <main class="max-w-4xl mx-auto my-10 px-6 space-y-12">
+  <!-- 關於我 -->
+  <section class="glass p-6 text-gray-800">
+    <h2 class="text-2xl font-bold mb-4 text-blue-600">關於我</h2>
+    <div class="flex flex-col md:flex-row md:items-start">
+      <p class="mb-6 md:mb-0 md:mr-6 flex-1 whitespace-pre-line">
+我是陳錦璇，目前就讀大學資訊相關科系。我是一位對學習充滿熱情的人，樂於接觸新事物，也習慣在生活中持續探索不同領域的知識。無論是專業技能還是日常常識，只要能帶來成長的機會，我都樂於投入並主動吸收。
+
+在團隊合作中，我擅長傾聽並給予支持，也能在需要時主動承擔責任，推動事情向前。我重視細節，對自己的工作品質有高度要求，同時也不怕從錯誤中修正、學習與調整。
+
+我相信持續學習與自我成長是職涯中最重要的事。未來希望能在實務中累積更多經驗，發揮所長，也貢獻所學。
+      </p>
+      <div class="w-60 h-60 relative">
+        <img id="profileImage" src="picture.jpg" alt="個人照片" class="w-full h-full object-cover rounded-lg shadow-lg transition duration-300" />
+        <div class="flex justify-center mt-2 space-x-2">
+          <button onclick="showImage(0)" id="dot0" class="w-3 h-3 rounded-full bg-blue-500"></button>
+          <button onclick="showImage(1)" id="dot1" class="w-3 h-3 rounded-full bg-gray-300"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 聯絡方式 & 學歷 -->
+  <div class="flex flex-col md:flex-row md:space-x-6">
+    <!-- 聯絡方式 -->
+    <section class="glass p-6 text-gray-800 flex-1 mb-6 md:mb-0">
+      <h2 class="text-2xl font-bold mb-4 text-blue-600">聯絡方式</h2>
+      <ul class="space-y-2 text-lg">
+        <li>📞 電話：0970751110</li>
+        <li>📧 Email：<a href="mailto:st1034322@gmail.com" class="underline text-blue-600">st1034322@gmail.com</a></li>
+      </ul>
+    </section>
+
+    <!-- 學歷 -->
+    <section class="glass p-6 text-gray-800 flex-1">
+      <h2 class="text-2xl font-bold mb-4 text-blue-600">學歷</h2>
+      <ul class="space-y-2 text-lg">
+        <li>🎓 靜宜大學 資訊管理系<br><span class="text-sm text-gray-700">2023 - 至今</span></li>
+        <li>🏫 嶺東高中 普通科<br><span class="text-sm text-gray-700">2020 - 2023</span></li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+
+  <footer class="text-center text-sm text-gray-600 mt-10 mb-4">
+    © 2025 陳錦璇
+  </footer>
+</body>
+</html>
