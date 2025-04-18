@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>職涯測驗結果</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #fff9c4, #fffde7); /* 黃色背景 */
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+    }
+    .jump-link {
+      transition: transform 0.15s ease-in-out;
+      display: inline-block;
+    }
+    .jump-link:hover {
+      transform: scale(1.8);
+    }
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+    }
+    .modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 1rem;
+      border-radius: 1rem;
+      max-width: 90vw;
+      max-height: 80vh;
+      overflow: auto;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      z-index: 60;
+    }
+    .hidden { display: none; }
+    p, li, button, a {
+      font-size: 1.125rem; /* 提高文字大小為 lg */
+    }
+  </style>
+  <script>
+    function openModal() {
+      document.getElementById("modalOverlay").classList.remove("hidden");
+      document.getElementById("modal").classList.remove("hidden");
+    }
+    function closeModal() {
+      document.getElementById("modalOverlay").classList.add("hidden");
+      document.getElementById("modal").classList.add("hidden");
+    }
+  </script>
+</head>
+
+<body class="text-gray-800">
+  <!-- 主標題 -->
+  <header class="p-6 text-center">
+    <h1 class="text-3xl font-bold text-blue-900 drop-shadow-lg">職涯測驗結果</h1>
+  </header>
+
+  <!-- 導覽列 -->
+  <nav class="bg-white bg-opacity-20 backdrop-blur-md text-blue-500 font-semibold shadow-md rounded-full w-max mx-auto px-6 py-2 my-6">
+    <ul class="flex justify-center space-x-6">
+      <li><a href="index.html" class="jump-link">關於我</a></li>
+      <li><a href="job.html" class="jump-link">職涯測驗結果</a></li>
+      <li><a href="resume.html" class="jump-link">未來規劃</a></li>
+      <li><a href="career.html" class="jump-link">職涯目標</a></li>
+    </ul>
+  </nav>
+
+  <!-- 內容區 -->
+  <main class="max-w-5xl mx-auto px-6 py-8 space-y-8">
+
+    <!-- 區塊1：職涯測驗結果 -->
+    <section class="glass" style="background-color: #fcd5ce88;">
+      <h2 class="text-2xl font-bold mb-4 text-pink-800">職涯測驗結果</h2>
+      <p>你的人格特質偏向分析型與實作型，擅長邏輯推理、喜歡實際操作，適合從事系統分析、資料處理與前端開發相關職位。</p>
+    </section>
+
+    <!-- 區塊2：我的興趣代碼 -->
+    <section class="glass" style="background-color: #fef9c388;">
+      <h2 class="text-2xl font-bold mb-4 text-yellow-800">我的興趣代碼</h2>
+      <ul class="list-disc list-inside">
+        <li><strong>🎨 A（藝術型）：代表創意與想像</strong></li>
+        <li><strong>🔧 R（實作型）：代表動手做與實作力</strong></li>
+      </ul>
+    </section>
+
+    <!-- 區塊3：你適合從事的工作 -->
+    <section class="glass" style="background-color: #e0f7fa88;">
+      <h2 class="text-2xl font-bold mb-4 text-blue-800">你適合從事的工作</h2>
+      <ul class="list-disc list-inside">
+        <li><img src="https://cdn-icons-png.flaticon.com/512/2920/2920027.png" class="inline w-5 h-5 mr-1">導演 / 攝影師</li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/3534/3534006.png" class="inline w-5 h-5 mr-1">平面 / 動畫設計師</li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" class="inline w-5 h-5 mr-1">前端網頁設計</li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/3534/3534066.png" class="inline w-5 h-5 mr-1">多媒體創作者</li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/3039/3039381.png" class="inline w-5 h-5 mr-1">UI/UX 設計師</li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/3682/3682321.png" class="inline w-5 h-5 mr-1">影像剪輯師</li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/921/921347.png" class="inline w-5 h-5 mr-1">產品攝影 / 美術設計</li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" class="inline w-5 h-5 mr-1">系統分析師</li>
+        <li><img src="https://cdn-icons-png.flaticon.com/512/1022/1022309.png" class="inline w-5 h-5 mr-1">資料工程師 / 資料分析</li>
+      </ul>
+    </section>
+
+    <!-- 測驗圖按鈕 -->
+    <div class="flex justify-center mt-6">
+      <button onclick="openModal()" class="bg-pink-300 hover:bg-pink-400 text-white font-bold py-2 px-4 rounded-full shadow">
+        🎨 看我的測驗圖！
+      </button>
+    </div>
+
+    <!-- 彈出視窗 -->
+    <div id="modalOverlay" class="modal-overlay hidden" onclick="closeModal()"></div>
+    <div id="modal" class="modal hidden">
+      <button onclick="closeModal()" class="absolute top-2 right-3 text-gray-500 hover:text-red-500 font-bold text-lg">×</button>
+      <img src="興趣測驗.jpg" alt="詳細分析圖片" class="w-full max-w-4xl mx-auto rounded">
+    </div>
+
+    <!-- 返回首頁 -->
+    <div class="flex justify-center mt-10">
+      <a href="index.html" class="inline-flex items-center bg-yellow-300 hover:bg-yellow-400 text-yellow-900 font-bold py-2 px-6 rounded-full shadow transition">
+        🏠 返回首頁
+      </a>
+    </div>
+
+  </main>
+</body>
+</html>

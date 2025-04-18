@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>職涯目標</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #dbeafe; /* 中灰藍背景 */
+    }
+
+    .jump-link {
+      transition: transform 0.15s ease-in-out;
+      display: inline-block;
+    }
+
+    .jump-link:hover {
+      transform: scale(1.8);
+    }
+
+    .job-card {
+      background-color: #ffffffcc;
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+ <!-- 主標題 -->
+  <header class="p-6 text-center">
+    <h1 class="text-3xl font-bold text-blue-900 drop-shadow-lg">職涯目標</h1>
+  </header>
+  <!-- 導覽列 -->
+  <nav class="bg-white bg-opacity-20 backdrop-blur-md text-blue-500 font-semibold shadow-md rounded-full w-max mx-auto px-6 py-2 my-4">
+    <ul class="flex justify-center space-x-6">
+      <li><a href="index.html" class="jump-link">關於我</a></li>
+      <li><a href="job.html" class="jump-link">職涯測驗結果</a></li>
+      <li><a href="resume.html" class="jump-link">未來規劃</a></li>
+      <li><a href="career.html" class="jump-link">職涯目標</a></li>
+    </ul>
+  </nav>
+
+  <main class="max-w-5xl mx-auto px-6 space-y-10 my-10">
+    
+    <!-- 前端工程師 -->
+    <section class="job-card">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="logo.jpg" alt="康軒 Logo" class="w-16 h-16 object-contain">
+        <h2 class="text-2xl font-bold text-blue-800">前端工程師（數位事業處數位營業部） - 康軒文教事業股份有限公司</h2>
+      </div>
+      <ul class="list-disc list-inside leading-8 text-lg text-gray-700">
+        <li>線上課程前端網頁開發、會員介面建制。</li>
+        <li>2025年預計使用 React.js 重構，與後端工程師及 UI/UX 設計師合作。</li>
+        <li>配合 PM 與營運主管規劃開發流程，進行 API 串接與介面呈現協調。</li>
+        <li>重視 code review，撰寫模組化、易維護的程式碼。</li>
+        <li>與後端工程師共同優化開發與測試流程，評估並導入新工具。</li>
+        <li>具備彈性且開放的技術學習態度。</li>
+        <li>主動分享業界新知與實作方式，促進團隊學習。</li>
+      </ul>
+    </section>
+
+    <!-- 系統管理工程師 -->
+    <section class="job-card">
+      <div class="flex items-center space-x-4 mb-4">
+        <img src="logo2.gif" alt="福又達 Logo" class="w-16 h-16 object-contain">
+        <h2 class="text-2xl font-bold text-blue-800">系統管理工程師 System Management Engineer - 福又達生物科技股份有限公司</h2>
+      </div>
+      <ul class="list-disc list-inside leading-8 text-lg text-gray-700">
+        <li>維護伺服器系統運作（熟悉 Windows Server、VM 操作維護）。</li>
+        <li>撰寫與優化 SQL 指令，協助資料查詢與報表產出。</li>
+        <li>執行 API 串接與測試，協助系統間資料整合。</li>
+        <li>協助導入、測試內部應用系統，提供使用者支援。</li>
+        <li>處理用戶端電腦及周邊裝置的安裝與維修。</li>
+        <li>主管交辦之專案規劃與執行。</li>
+      </ul>
+    </section>
+
+     <!-- 返回首頁 -->
+    <div class="flex justify-center mt-10">
+      <a href="index.html" class="inline-flex items-center bg-yellow-300 hover:bg-yellow-400 text-yellow-900 font-bold py-2 px-6 rounded-full shadow transition">
+        🏠 返回首頁
+      </a>
+    </div>
+
+  </main>
+
+</body>
+</html>

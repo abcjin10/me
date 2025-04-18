@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>未來規劃</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #d0f0c0, #e0f8d8);
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+    }
+    .jump-link {
+      transition: transform 0.15s ease-in-out;
+      display: inline-block;
+    }
+    .jump-link:hover {
+      transform: scale(1.8);
+    }
+  </style>
+</head>
+
+<body class="text-gray-800">
+<!-- 主標題 -->
+ <header class="p-6 text-center">
+    <h1 class="text-3xl font-bold text-blue-900 drop-shadow-lg">未來規劃</h1>
+  </header>
+
+
+  <!-- 導覽列 -->
+  <nav class="bg-white bg-opacity-20 backdrop-blur-md text-green-600 font-semibold shadow-md rounded-full w-max mx-auto px-6 py-2 my-6">
+    <ul class="flex justify-center space-x-6">
+      <li><a href="index.html" class="jump-link">關於我</a></li>
+      <li><a href="job.html" class="jump-link">職涯測驗結果</a></li>
+      <li><a href="resume.html" class="jump-link">未來規劃</a></li>
+      <li><a href="career.html" class="jump-link">職涯目標</a></li>
+    </ul>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-10">
+    <section class="glass">
+      <h2 class="text-2xl font-bold text-green-800 mb-4">🌟 職涯目標</h2>
+      <p class="text-lg leading-7">
+        我對於資訊領域充滿熱情，特別是<strong>前端工程師</strong>與<strong>系統管理工程師</strong>兩個職位。前端開發讓我能結合設計與程式，打造吸引人的網頁介面；而系統管理則挑戰我的邏輯與問題解決能力，讓我樂在其中。
+      </p>
+    </section>
+
+    <section class="glass">
+      <h2 class="text-2xl font-bold text-green-800 mb-4">🌱 我的優勢</h2>
+      <ul class="list-disc list-inside text-lg leading-7">
+        <li>具備資訊管理系統化學習背景，理解前後端運作邏輯</li>
+        <li>修過網頁前端相關課程，熟悉 HTML、CSS、JavaScript</li>
+        <li>對新技術有高度好奇與學習動機，具備持續成長的動力</li>
+      </ul>
+    </section>
+
+    <section class="glass">
+      <h2 class="text-2xl font-bold text-green-800 mb-4">🛠️ 已學技能</h2>
+      <ul class="list-disc list-inside text-lg leading-7">
+        <li>HTML5、CSS3、JavaScript</li>
+        <li>網頁切版與響應式設計</li>
+        <li>基本 Git 版本控制操作</li>
+        <li>Windows 系統操作</li>
+      </ul>
+    </section>
+
+    <section class="glass">
+      <h2 class="text-2xl font-bold text-green-800 mb-4">📚 未來想學的技術</h2>
+      <ul class="list-disc list-inside text-lg leading-7">
+        <li>React.js 前端框架</li>
+        <li>API 串接與資料整合</li>
+        <li>Docker 容器化與部署</li>
+        <li>網頁效能優化技巧</li>
+      </ul>
+    </section>
+
+    <section class="glass">
+      <h2 class="text-2xl font-bold text-green-800 mb-4">📜 想考的證照</h2>
+      <ul class="list-disc list-inside text-lg leading-7">
+        <li>TQC+ 前端網頁設計</li>
+        <li>初階網頁設計師證照</li>
+        <li>MTA 資料庫基礎</li>
+      </ul>
+    </section>
+
+    <!-- 返回按鈕 -->
+    <div class="text-center mt-10">
+      <a href="index.html" class="inline-flex items-center bg-pink-200 hover:bg-pink-300 text-pink-800 font-bold py-2 px-6 rounded-full shadow transition">
+        🏠 返回首頁
+      </a>
+    </div>
+  </main>
+
+  <footer class="text-center p-4 mt-10 text-sm text-gray-600">
+    © 2025 陳錦璇
+  </footer>
+</body>
+</html>
